@@ -54,7 +54,7 @@ function createShoppingList() {
 }
 
 const Recipes = {
-  create: function(name, ingredients) {
+  create: (name, ingredients) => {
     console.log('Creating a new recipe');
     const item = {
       name: name,
@@ -74,7 +74,7 @@ const Recipes = {
   },
   update: function(updatedItem) {
     console.log(`Updating recipe with id \`${updatedItem.id}\``);
-    const {id} = updatedItem;
+    const { id } = updatedItem;
     if (!(id in this.items)) {
       throw StorageException(
         `Can't update item \`${id}\` because doesn't exist.`)
