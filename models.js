@@ -54,12 +54,12 @@ function createShoppingList() {
 }
 
 const Recipes = {
-  create: (name, ingredients) => {
+  create: function (name, ingredients) {
     console.log('Creating a new recipe');
     const item = {
       name: name,
       id: uuid.v4(),
-      ingredients: ingredients
+      ingredients: ingredients,
     };
     this.items[item.id] = item;
     return item;
@@ -93,5 +93,5 @@ function createRecipes() {
 
 module.exports = {
   ShoppingList: createShoppingList(),
-  Recipes: createRecipes()
-}
+  Recipes: createRecipes(),
+};
